@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Desi Drink</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS (Animate on Scroll) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Swiper.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========================
+       NAVIGATION BAR
+  ======================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+
+      <!-- Logo -->
+      <a href="#home" class="nav-logo">
+        <span class="logo-icon">☕</span>
+        <span class="logo-text">The Desi Drink</span>
+      </a>
+
+      <!-- Nav Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <!-- <li><a href="#reviews" class="nav-link">Reviews</a></li> -->
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Right side controls -->
+      <div class="nav-controls">
+        <!-- Dark Mode Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <!-- Hamburger for mobile -->
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile nav overlay -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+
+  <!-- ========================
+       HERO SECTION
+  ======================== -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-aos="fade-down" data-aos-delay="100">Est. 2026 · Tamnar, Chhattisgarh</p>
+      <h1 class="hero-heading" data-aos="fade-up" data-aos-delay="200">
+        Every Cup Tells<br /><em>a Story</em>
+      </h1>
+      <p class="hero-subtext" data-aos="fade-up" data-aos-delay="350">
+        Slow mornings, bold espresso, and food that feels like a hug. Welcome to The Desi Drink.
+      </p>
+      <div class="hero-buttons" data-aos="fade-up" data-aos-delay="500">
+        <a href="#menu" class="btn btn-primary">Explore Menu</a>
+        <a href="#contact" class="btn btn-outline">Find Us</a>
+      </div>
+    </div>
+    <!-- Scroll Indicator -->
+    <a href="#about" class="scroll-down" aria-label="Scroll down">
+      <span class="scroll-line"></span>
+      <span class="scroll-label">scroll</span>
+    </a>
+  </section>
+
+
+  <!-- ========================
+       ABOUT SECTION
+  ======================== -->
+  <section class="about section" id="about">
+    <div class="about_container">
+      <div class="about-grid">
+
+        <!-- Left: Image -->
+        <div class="about-image-wrap" data-aos="fade-right">
+          <div class="about-img-frame">
+            <img src="/images/hero.jpg" alt="Inside The Desi Drinks" class="about-img" />
+          </div>
+          <div class="about-badge">
+            <span class="badge-num">5★</span>
+            <span class="badge-label">Rated by locals</span>
+          </div>
+        </div>
+
+        <!-- Right: Story -->
+        <div class="about-content" data-aos="fade-left" data-aos-delay="100">
+          <p class="section-eyebrow">Our Story</p>
+          <h2 class="section-title">More Than a Café.<br />A Feeling.</h2>
+          <p class="about-text">
+            The Desi Drink was born from a simple belief: that great coffee and honest food can transform an ordinary moment into something worth remembering. We design every corner of our space to feel like a second home.
+          </p>
+          <p class="about-text">
+            Our mission is to slow you down, just for a little while — so you can actually taste your coffee, feel the warmth of the cup, and breathe.
+          </p>
+
+          <!-- Animated Stats -->
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-num" data-target="1000">0</span><span class="stat-suffix">+</span>
+              <span class="stat-label">Happy Guests</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="16">0</span>
+              <span class="stat-label">Menu Items</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="1">0</span>
+              <span class="stat-label">Years Open</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="5">0</span>
+              <span class="stat-label">Avg Rating</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================
+       FOOD GALLERY (Swiper)
+  ======================== -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow">Visual Feast</p>
+        <h2 class="section-title">Made to be Photographed,<br />Meant to be Eaten</h2>
+      </div>
+    </div>
+
+    <!-- Swiper Gallery -->
+    <div class="swiper gallery-swiper" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide gallery-slide">
+          <img src="images/BlackCurrantIceCream.jpg" alt="BlackCurrantIceCream" />
+          <div class="slide-overlay">
+            <span>Black Currant IceCream</span>
+          </div>
+        </div>
+        <div class="swiper-slide gallery-slide">
+          <img src="images/BunMaska.jpg" alt="BunMaska" />
+          <div class="slide-overlay">
+            <span>Bun Maska</span>
+          </div>
+        </div>
+        <div class="swiper-slide gallery-slide">
+          <img src="images/CoffeeIceCream.jpg" alt="CoffeeIceCream" />
+          <div class="slide-overlay">
+            <span>Coffee IceCream</span>
+          </div>
+        </div>
+        <div class="swiper-slide gallery-slide">
+          <img src="images/Chaanch.jpg" alt="Chaanch" />
+          <div class="slide-overlay">
+            <span>Chaanch</span>
+          </div>
+        </div>
+        <div class="swiper-slide gallery-slide">
+          <img src="images/BlackCurrantLassi.jpg" alt="BlackCurrantLassi" />
+          <div class="slide-overlay">
+            <span>Black Currant Lassi</span>
+          </div>
+        </div>
+        <div class="swiper-slide gallery-slide">
+          <img src="images/HotCoffee.jpg" alt="HotCoffee" />
+          <div class="slide-overlay">
+            <span>Hot Coffee</span>
+          </div>
+        </div>
+        <div class="swiper-slide gallery-slide">
+          <img src="images/CheesePaneerSandwich.jpg" alt="CheesePaneerSandwich" />
+          <div class="slide-overlay">
+            <span>Cheese Paneer Sandwich</span>
+          </div>
+        </div>
+        <div class="swiper-slide gallery-slide">
+          <img src="images/MangoLassi.jpg" alt="MangoLassi" />
+          <div class="slide-overlay">
+            <span>Mango Lassi</span>
+          </div>
+        </div>
+        <div class="swiper-slide gallery-slide">
+          <img src="images/HotChoclateCoffee.jpg" alt="HotChoclateCoffee" />
+          <div class="slide-overlay">
+            <span>Hot Choclate Coffee</span>
+          </div>
+        </div>
+        <div class="swiper-slide gallery-slide">
+          <img src="images/MangoIceCream.jpg" alt="MangoIceCream" />
+          <div class="slide-overlay">
+            <span>Mango IceCream</span>
+          </div>
+        </div>
+        <div class="swiper-slide gallery-slide">
+          <img src="images/MangoMousse.jpg" alt="MangoMousse" />
+          <div class="slide-overlay">
+            <span>Mango Mousse</span>
+          </div>
+        </div>
+        <div class="swiper-slide gallery-slide">
+          <img src="images/OrangeIceCream.jpg" alt="OrangeIceCream" />
+          <div class="slide-overlay">
+            <span>Orange IceCream</span>
+          </div>
+        </div>
+
+        
+
+      </div>
+      <div class="swiper-pagination gallery-pagination"></div>
+      <div class="swiper-button-prev gallery-prev"></div>
+      <div class="swiper-button-next gallery-next"></div>
+    </div>
+  </section>
+
+
+  <!-- ========================
+       FEATURED DISHES
+  ======================== -->
+  <section class="featured section" id="featured">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow">Chef's Pick</p>
+        <h2 class="section-title">Dishes Worth Coming Back For</h2>
+      </div>
+
+      <div class="dishes-grid">
+
+        <div class="dish-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="dish-img-wrap">
+            <img src="/images/MangoLassi.jpg" alt="Espresso" />
+          </div>
+          <div class="dish-info">
+            <h3 class="dish-name">Mango Lassi</h3>
+            <p class="dish-desc">Refreshing creamy yogurt blended with sweet ripe mangoes, perfectly chilled delight.</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹60</span>
+              <!-- <button class="btn-add">+ Add</button> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="dish-img-wrap">
+            <img src="/images/Sandwich.png" alt="CheesePaneerSandwich" />
+          </div>
+          <div class="dish-info">
+            <h3 class="dish-name">Cheese Paneer Sandwich</h3>
+            <p class="dish-desc">Grilled sandwich packed with paneer, melted cheese, fresh vegetables, and flavorful spices.</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹80</span>
+              <!-- <button class="btn-add">+ Add</button> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="dish-img-wrap">
+            <img src="/images//HotChoclateCoffee.jpg" alt="HotChoclateCoffee" />
+          </div>
+          <div class="dish-info">
+            <h3 class="dish-name">Hot Choclate Coffee</h3>
+            <p class="dish-desc">Rich hot chocolate blended with aromatic coffee, creating a warm indulgent beverage.</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹40</span>
+              <!-- <button class="btn-add">+ Add</button> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="dish-img-wrap">
+            <img src="/images/RabdiLassi.jpg" alt="RabdiLassi" />
+          </div>
+          <div class="dish-info">
+            <h3 class="dish-name">Rabdi Lassi</h3>
+            <p class="dish-desc">Rich creamy rabdi lassi topped with nuts, irresistibly refreshing and indulgent delight.</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹50</span>
+              <!-- <button class="btn-add">+ Add</button> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================
+       FULL MENU (Accordion)
+  ======================== -->
+  <section class="menu section" id="menu">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow">Full Menu</p>
+        <h2 class="section-title">Something for Every Mood</h2>
+      </div>
+
+      <div class="menu-accordion" id="menuAccordion">
+
+        <!-- Coffee -->
+        <div class="acc-item" data-aos="fade-up">
+          <button class="acc-trigger">
+            <span><i class="fas fa-mug-hot acc-icon"></i> Coffee</span>
+            <i class="fas fa-chevron-down acc-arrow"></i>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-items-grid">
+              <div class="acc-dish">
+                <img src="/images/coffee/HotCoffee.jpg" alt="HotCoffee" />
+                <div>
+                  <strong>Hot Coffee</strong>
+                  <p>Strong Classic Coffee</p>
+                  <span>₹30</span>
+                </div>
+              </div>
+              <div class="acc-dish">
+                <img src="/images/coffee/HotChoclateCoffee.jpg" alt="HotChoclateCoffee" />
+                <div>
+                  <strong>Hot Choclate Coffee</strong>
+                  <p>Cozy Chocolate Coffee</p>
+                  <span>₹40</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- SNACKS -->
+        <div class="acc-item" data-aos="fade-up">
+          <button class="acc-trigger">
+            <span><i class="fas fa-mug-hot acc-icon"></i> Snacks</span>
+            <i class="fas fa-chevron-down acc-arrow"></i>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-items-grid">
+              <div class="acc-dish">
+                <img src="/images/snacks/BunMaska.jpg" alt="BunMaska" />
+                <div>
+                  <strong>Bun Maska</strong>
+                  <p>Classic Buttered Bun</p>
+                  <span>₹40</span>
+                </div>
+              </div>
+              <div class="acc-dish">
+                <img src="/images/snacks/CheesePaneerSandwich.jpg" alt="CheesePaneerSandwich" />
+                <div>
+                  <strong>Cheese Paneer Sandwich</strong>
+                  <p>Cheesy Grilled Paneer Perfection</p>
+                  <span>₹80-₹100</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          
+
+
+        <!-- Beverages -->
+        <div class="acc-item" data-aos="fade-up" data-aos-delay="300">
+          <button class="acc-trigger">
+            <span><i class="fas fa-cake-candles acc-icon"></i> Beverages</span>
+            <i class="fas fa-chevron-down acc-arrow"></i>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-items-grid">
+              <div class="acc-dish">
+                <img src="/images/bevrage/Chaanch.jpg" alt="Chaanch" />
+                <div>
+                  <strong>Chaanch</strong>
+                  <p>Fresh Masala Chaanch</p>
+                  <span>₹20</span>
+                </div>
+              </div>
+              <div class="acc-dish">
+                <img src="/images/bevrage/SattuDrink.jpg" alt="SattuDrink" />
+                <div>
+                  <strong>Sattu Drink</strong>
+                  <p>Natural Summer Refresher</p>
+                  <span>₹30</span>
+                </div>
+              </div>
+              <div class="acc-dish">
+                <img src="/images/bevrage/SaunfDrink.jpg" alt="SaunfBreeze" />
+                <div>
+                  <strong>Saunf Breeze</strong>
+                  <p>Cooling Saunf Delight</p>
+                  <span>₹20</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Desserts -->
+        <div class="acc-item" data-aos="fade-up" data-aos-delay="300">
+          <button class="acc-trigger">
+            <span><i class="fas fa-cake-candles acc-icon"></i> Ice Creams</span>
+            <i class="fas fa-chevron-down acc-arrow"></i>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-items-grid">
+              <div class="acc-dish">
+                <img src="/images/icecream/MangoIceCream.jpg" alt="MangoIceCream" />
+                <div>
+                  <strong>Mango IceCream</strong>
+                  <p>Pure Mango Goodness</p>
+                  <span>₹50</span>
+                </div>
+              </div>
+              <div class="acc-dish">
+                <img src="/images/icecream/BlackCurrantIceCream.jpg" alt="BlackCurrantIceCream" />
+                <div>
+                  <strong>Black Currant IceCream</strong>
+                  <p>Refreshing Berry Treat</p>
+                  <span>₹50</span>
+                </div>
+              </div>
+              <div class="acc-dish">
+                <img src="/images/icecream/CoffeeIceCream.jpg" alt="CoffeeIceCream" />
+                <div>
+                  <strong>Coffee IceCream</strong>
+                  <p>Fresh Coffee Scoop</p>
+                  <span>₹50</span>
+                </div>
+              </div>
+              <div class="acc-dish">
+                <img src="/images/icecream/MangoMousse.jpg" alt="MangoMousse" />
+                <div>
+                  <strong>Mango Mousse</strong>
+                  <p>Melt-in-Mouth Mango</p>
+                  <span>₹60</span>
+                </div>
+              </div>
+              <div class="acc-dish">
+                <img src="/images/icecream/OrangeIceCream.jpg" alt="OrangeIceCream" />
+                <div>
+                  <strong>Orange IceCream</strong>
+                  <p>Refreshing Orange Bliss</p>
+                  <span>₹60</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!--  -->
+        <div class="acc-item" data-aos="fade-up" data-aos-delay="350">
+          <button class="acc-trigger">
+            <span><i class="fas fa-ice-cream acc-icon"></i> Lassi</span>
+            <i class="fas fa-chevron-down acc-arrow"></i>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-items-grid">
+              <div class="acc-dish">
+                <img src="/images/lassi/BlackCurrantLassi.jpg" alt="BlackCurrantLassi" />
+                <div>
+                  <strong>Black Currant Lassi</strong>
+                  <p>Premium Berry Blend</p>
+                  <span>₹60</span>
+                </div>
+              </div>
+              <div class="acc-dish">
+                <img src="/images/lassi/MangoLassi.jpg" alt="MangoLassi" />
+                <div>
+                  <strong>Mango Lassi</strong>
+                  <p>Thick Mango Lassi</p>
+                  <span>₹60</span>
+                </div>
+              </div>
+              <div class="acc-dish">
+                <img src="/images/lassi/RabdiLassi.jpg" alt="RabdiLassi" />
+                <div>
+                  <strong>Rabdi Lassi</strong>
+                  <p>Royal Rabdi Delight</p>
+                  <span>₹50</span>
+                </div>
+              </div>
+              <div class="acc-dish">
+                <img src="/images/lassi/StrawberryLassi.jpg" alt="StrawberryLassi" />
+                <div>
+                  <strong>Strawberry Lassi</strong>
+                  <p>Strawberry Yogurt Treat</p>
+                  <span>₹60</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /menu-accordion -->
+    </div>
+  </section>
+
+
+  <!-- ========================
+       WHY CHOOSE US
+  ======================== -->
+  <section class="why section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow">The Desi Drinks Promise</p>
+        <h2 class="section-title">Why Guests Keep Coming Back</h2>
+      </div>
+
+      <div class="why-grid">
+
+        <div class="why-card" data-aos="zoom-in" data-aos-delay="0">
+          <div class="why-icon"><i class="fas fa-seedling"></i></div>
+          <h3>Fresh Ingredients</h3>
+          <p>Everything is sourced locally and prepared same-day. No shortcuts, ever.</p>
+        </div>
+
+        <div class="why-card" data-aos="zoom-in" data-aos-delay="80">
+          <div class="why-icon"><i class="fas fa-bolt"></i></div>
+          <h3>Fast Service</h3>
+          <p>Your order in under 12 minutes, or your next coffee is on us.</p>
+        </div>
+
+        <div class="why-card" data-aos="zoom-in" data-aos-delay="160">
+          <div class="why-icon"><i class="fas fa-tag"></i></div>
+          <h3>Honest Prices</h3>
+          <p>Premium quality without the premium bill. Real food at real prices.</p>
+        </div>
+
+        <div class="why-card" data-aos="zoom-in" data-aos-delay="240">
+          <div class="why-icon"><i class="fas fa-couch"></i></div>
+          <h3>Cozy Ambience</h3>
+          <p>Soft lighting, warm corners. Stay as long as you like.</p>
+        </div>
+
+        <div class="why-card" data-aos="zoom-in" data-aos-delay="320">
+          <div class="why-icon"><i class="fas fa-children"></i></div>
+          <h3>Family Friendly</h3>
+          <p>A dedicated kids menu and high chairs. Everyone's welcome at Brūn.</p>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================
+       REVIEWS SECTION
+  ======================== -->
+
+
+  <!-- ========================
+       CONTACT SECTION
+  ======================== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow">Come Visit</p>
+        <h2 class="section-title">We'd Love to See You</h2>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Left: Map & Info -->
+        <div class="contact-left" data-aos="fade-right">
+          <!-- Google Maps Placeholder -->
+          <div class="map-placeholder">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3697.0342898530735!2d83.43424879999999!3d22.086507400000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a27372c850a2cad%3A0x6573c4344b675eec!2sThe%20Desi%20Drink!5e0!3m2!1sen!2sin!4v1782670408227!5m2!1sen!2sin" 
+              width="100%"
+              height="260"
+              style="border:0; border-radius:16px;"
+              allowfullscreen=""
+              loading="lazy"
+              title="Brūn Café location"
+            ></iframe>
+          </div>
+          <div class="contact-details-static">
+            <div class="contact-detail-item">
+              <i class="fas fa-location-dot"></i>
+              <span>near Subh Dental Clinic, Tamnar, Chhattisgarh 496107</span>
+            </div>
+            <div class="contact-detail-item">
+              <i class="fas fa-clock"></i>
+              <span>Mon–Sun: 10:00 AM - 2:00 PM</span>
+              <br>
+              <span> 5:00 PM - 10:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Contact Card -->
+        <div class="contact-right" data-aos="fade-left" data-aos-delay="100">
+          <div class="contact-card">
+            <h3>Get in Touch</h3>
+            <p>Have a reservation, feedback, or just want to say hello?</p>
+
+            <!-- Socials -->
+            <div class="social-row">
+              <a href="#" class="social-btn insta" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-btn fb" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-btn wa" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="#" class="social-btn mail" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+
+            <!-- Reveal Button -->
+            <button class="btn btn-primary btn-full" id="showContactBtn">
+              <i class="fas fa-address-card"></i> Show Contact Details
+            </button>
+
+            <!-- Hidden Contact Details -->
+            <div class="hidden-contact" id="hiddenContact">
+              <div class="hc-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <small>Phone</small>
+                  <strong>+91 98765 43210</strong>
+                </div>
+              </div>
+              <div class="hc-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <small>Email</small>
+                  <strong>hello@gmail.cafe</strong>
+                </div>
+              </div>
+              <div class="hc-item">
+                <i class="fab fa-whatsapp"></i>
+                <div>
+                  <small>WhatsApp</small>
+                  <strong>+91 98765 43210</strong>
+                </div>
+              </div>
+              <div class="hc-item">
+                <i class="fas fa-location-dot"></i>
+                <div>
+                  <small>Address</small>
+                  <strong>near Subh Dental Clinic, Tamnar, Chhattisgarh 496107</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================
+       FOOTER
+  ======================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo footer-logo">
+            <span class="logo-icon">☕</span>
+            <span class="logo-text">The Desi Drinks</span>
+          </a>
+          <p>A café where every cup is crafted with intention and every bite with love.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <!-- <li><a href="#reviews">Reviews</a></li> -->
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-hours">
+          <h4>Opening Hours</h4>
+          <ul>
+              
+            <li><span>Mon - Sun</span><span>10 AM - 2 PM</span><span> 5 PM - 10 PM</span></li>
+            <!-- <li><span>Fri</span><span>10:00 AM - 2:00 PM</span><span> 5:00 PM - 10:00 PM</span></li>
+            <li><span>Sat-Sun</span><span>10:00 AM - 2:00 PM</span><span> 5:00 PM - 10:00 PM</span></li> -->
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 The Desi Drinks. All rights reserved.</p>
+        <p>Designed with <span style="color:#C9A86C">❤</span> for coffee lovers</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ========================
+       SCROLL TO TOP BUTTON
+  ======================== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+
+  <!-- ========================
+       REVIEW POPUP MODAL
+  ======================== -->
+  
+
+
+  <!-- ========================
+       SCRIPTS
+  ======================== -->
+  <!-- AOS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Main Script -->
+  <script src="script.js"></script>
+
+</body>
+</html>
